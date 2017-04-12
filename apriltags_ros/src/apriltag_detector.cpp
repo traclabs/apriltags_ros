@@ -80,7 +80,7 @@ void AprilTagDetector::imageCb(const sensor_msgs::ImageConstPtr& msg, const sens
   cv::Mat gray;
   cv::cvtColor(cv_ptr->image, gray, CV_BGR2GRAY);
   std::vector<AprilTags::TagDetection>	detections = tag_detector_->extractTags(gray);
-  ROS_DEBUG("%d tag detected", (int)detections.size());
+  ROS_INFO("%d tags detected", (int)detections.size());
 
   double fx;
   double fy;
