@@ -7,7 +7,8 @@ project(apriltags)
 find_package(catkin REQUIRED COMPONENTS cmake_modules
 )
 
-find_package(Eigen REQUIRED)
+find_package(PkgConfig)
+pkg_check_modules(Eigen REQUIRED eigen3)
 find_package(OpenCV REQUIRED)
 
 catkin_package(
