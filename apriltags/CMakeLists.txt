@@ -9,7 +9,7 @@ find_package(catkin REQUIRED COMPONENTS cmake_modules
 
 find_package(PkgConfig)
 pkg_check_modules(Eigen REQUIRED eigen3)
-find_package(OpenCV REQUIRED)
+find_package(OpenCV 3 REQUIRED)
 
 catkin_package(
   INCLUDE_DIRS include
